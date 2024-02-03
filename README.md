@@ -36,48 +36,48 @@ Modify files.
 
 # Commands
 
-Docker compose up
-```bash
-cd docker && docker-compose up -d
-```
+- Docker compose up
+  ```bash
+  cd docker && docker-compose up -d
+  ```
+  
+  If Dockerfile changed, Docker compose up with build
+  ```bash
+  cd docker && docker-compose up -d --build
+  ```
 
-If Dockerfile changed, Docker compose up with build
-```bash
-cd docker && docker-compose up -d --build
-```
+- Execute command in Docker
+  ```bash
+  docker exec -it {container_name} bash
+  # or
+  docker exec -it -w {WORK_DIR_PATH} {container_name} bash
+  ```
 
-Execute command in Docker
-```bash
-docker exec -it {container_name} bash
-# or
-docker exec -it -w {WORK_DIR_PATH} {container_name} bash
-```
+  As root
+  ```bash
+  docker exec -it -u 0 -w {WORK_DIR_PATH} {container_name} bash
+  ```
 
-As root
-```bash
-docker exec -it -u 0 -w {WORK_DIR_PATH} {container_name} bash
-```
+- Using JupyterLab (Optional)
+  ```bash
+  python -m jupyterlab --ip 0.0.0.0 --port {CONTAINER_PORT} --allow-root
+  ```
 
-Using JupyterLab (Optional)
-```bash
-python -m jupyterlab --ip 0.0.0.0 --port {CONTAINER_PORT} --allow-root
-```
+- Using Tensorboard
+  ```bash
+  tensorboard --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
+  # or
+  python /home/{USER}/.local/lib/python3.9/site-packages/tensorboard/main.py --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
+  ```
 
-Using Tensorboard
-```bash
-tensorboard --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
-# or
-python /home/{USER}/.local/lib/python3.9/site-packages/tensorboard/main.py --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
-```
-
-Login W & D
-```bash
-wandb login
-# or
-python3 -m wandb login
-# or
-/usr/bin/python3 -m wandb login
-```
+- Login W & D
+  ```bash
+  wandb login
+  # or
+  python3 -m wandb login
+  # or
+  /usr/bin/python3 -m wandb login
+  ```
 
 # Reference
 - [Ueda's Sample](https://github.com/sh1027/docker_pytorch)
