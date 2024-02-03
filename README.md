@@ -1,17 +1,17 @@
 # Before Starting
 Modify files.
 
-- Modify `docker_template.env`
-  COMPOSE_PROJECT_NAME : project name
-  UID : UID
-  GID : GID
-  USER_NAME : user name used in container
-  WORKDIR_CONTAINER : container WORKDIR
-  WORKDIR_LOCAL : local WORKDIR
-  IMAGE_LABEL : label to cache docker image with label
-  CONTAINER_NAME : CONTAINER NAME
-  HOST_PORT : HOST_PORT
-  CONTAINER_PORT : CONTAINER_PORT
+- Modify `docker_template.env` \
+  COMPOSE_PROJECT_NAME : project name \
+  UID : UID \
+  GID : GID \
+  USER_NAME : user name used in container \
+  WORKDIR_CONTAINER : container WORKDIR \
+  WORKDIR_LOCAL : local WORKDIR \
+  IMAGE_LABEL : label to cache docker image with label \
+  CONTAINER_NAME : CONTAINER NAME \
+  HOST_PORT : HOST_PORT \
+  CONTAINER_PORT : CONTAINER_PORT \
   
   You the commands to know your UID, GID
   ```bash
