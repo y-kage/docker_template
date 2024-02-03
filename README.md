@@ -1,19 +1,17 @@
 # Before Starting
 Modify files.
 
-- Modify `docker/.env`
-  ```bash
-  COMPOSE_PROJECT_NAME=$USER  # <- replace with your PROJECT NAME if necessary
-  UID=1010  # <- replace with your UID
-  GID=1010  # <- replace with your GID
-  IMAGE_LABEL=pytorch:1131  # <- replace with your CONTAINER IMAGE LABEL to cache docker image with label if necessary
-  CONTAINER_NAME=mydl  # <- replace with your CONTAINER NAME if necessary
-  USER_NAME=custom  # <- set any name used as user name in container
-  WORKDIR_CONTAINER=/home/${USER_NAME}/workspace/  # <- replace with your container WORKDIR, except /home/${USER_NAME}
-  WORKDIR_LOCAL=/home/kageyama/osx/  # <- replace with your local WORKDIR
-  HOST_PORT=8866  # <- replace with your HOST_PORT if necessary
-  CONTAINER_PORT=8866  # <- replace with your CONTAINER_PORT if necessary
-  ```
+- Modify `docker_template.env`
+  COMPOSE_PROJECT_NAME : project name
+  UID : UID
+  GID : GID
+  USER_NAME : user name used in container
+  WORKDIR_CONTAINER : container WORKDIR
+  WORKDIR_LOCAL : local WORKDIR
+  IMAGE_LABEL : label to cache docker image with label
+  CONTAINER_NAME : CONTAINER NAME
+  HOST_PORT : HOST_PORT
+  CONTAINER_PORT : CONTAINER_PORT
   
   You the commands to know your UID, GID
   ```bash
