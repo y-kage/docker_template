@@ -34,14 +34,15 @@ Modify files.
 
 # Commands
 
-- Docker compose up
+- Docker compose up \
+  Use command at the directory where docker-compose.yaml is
   ```bash
-  cd docker && docker-compose up -d
+  docker-compose up -d
   ```
   
   If Dockerfile changed, Docker compose up with build
   ```bash
-  cd docker && docker-compose up -d --build
+  docker-compose up -d --build
   ```
 
 - Execute command in Docker
