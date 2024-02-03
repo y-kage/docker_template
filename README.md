@@ -6,10 +6,10 @@ Modify files.
   - UID : UID
   - GID : GID
   - USER_NAME : user name used in container
-  - WORKDIR_CONTAINER : container WORKDIR
-  - WORKDIR_LOCAL : local WORKDIR
-  - IMAGE_LABEL : label to cache docker image with label
-  - CONTAINER_NAME : CONTAINER NAME
+  - WORKDIR_LOCAL : local WORKDIR, directory mounted to container
+  - WORKDIR_CONTAINER : container WORKDIR, directory where local WORKDIR mounted to
+  - IMAGE_LABEL : label to cache docker image with label, if exist, load, if not, build.
+  - CONTAINER_NAME : CONTAINER NAME, used to get in the container
   - HOST_PORT : HOST_PORT, use port not used at other containers
   - CONTAINER_PORT : CONTAINER_PORT, use port not used at other containers
   
