@@ -11,7 +11,7 @@ Modify files.
   IMAGE_LABEL : label to cache docker image with label \
   CONTAINER_NAME : CONTAINER NAME \
   HOST_PORT : HOST_PORT \
-  CONTAINER_PORT : CONTAINER_PORT \
+  CONTAINER_PORT : CONTAINER_PORT
   
   You the commands to know your UID, GID
   ```bash
