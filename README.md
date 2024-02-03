@@ -1,31 +1,37 @@
 # Before Starting
 Modify files.
 
-## Modify `docker/.env`
-```bash
-COMPOSE_PROJECT_NAME=$USER
-UID=1000  # <- replace with your UID
-GID=1000  # <- replace with your GID
-WORKDIR_LOCAL=PATH_TO_WORKDIR  # <- replace with your WORKDIR
-```
-
-Change uid, gid, workdir, ports.
-```bash
-id -u # UID
-id -g # GID
-```
-
-
-## docker-compose.yaml
-Change image, container_name, volumes, shm_size if needed.
-- image : name of image cached to local. if exist, load, if not, build.
-- container_name : name used to get in the container.
-- volumes : Correspondence. {local_dir}:{container_dir}
-- shm_size : shared memory size. check your spec.
+- Modify `docker/.env`
+  ```bash
+  COMPOSE_PROJECT_NAME=$USER  # <- replace with your PROJECT NAME if necessary
+  UID=1010  # <- replace with your UID
+  GID=1010  # <- replace with your GID
+  IMAGE_LABEL=pytorch:1131  # <- replace with your CONTAINER IMAGE LABEL to cache docker image with label if necessary
+  CONTAINER_NAME=mydl  # <- replace with your CONTAINER NAME if necessary
+  USER_NAME=custom  # <- set any name used as user name in container
+  WORKDIR_CONTAINER=/home/${USER_NAME}/workspace/  # <- replace with your container WORKDIR, except /home/${USER_NAME}
+  WORKDIR_LOCAL=/home/kageyama/osx/  # <- replace with your local WORKDIR
+  HOST_PORT=8866  # <- replace with your HOST_PORT if necessary
+  CONTAINER_PORT=8866  # <- replace with your CONTAINER_PORT if necessary
+  ```
+  
+  You the commands to know your UID, GID
+  ```bash
+  id -u # UID
+  id -g # GID
+  ```
 
 
-## Dockerfile
-Change docker image, libraries, python version.
+- docker-compose.yaml
+  Change image, container_name, volumes, shm_size if needed.
+  - image : name of image cached to local. if exist, load, if not, build.
+  - container_name : name used to get in the container.
+  - volumes : Correspondence. {local_dir}:{container_dir}
+  - shm_size : shared memory size. check your spec.
+
+
+- Dockerfile
+  Change docker image, libraries, python version.
 
 
 # Commands
