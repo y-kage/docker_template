@@ -10,10 +10,10 @@ Modify files.
   WORKDIR_LOCAL : local WORKDIR \
   IMAGE_LABEL : label to cache docker image with label \
   CONTAINER_NAME : CONTAINER NAME \
-  HOST_PORT : HOST_PORT \
-  CONTAINER_PORT : CONTAINER_PORT
+  HOST_PORT : HOST_PORT, use port not used at other containers \
+  CONTAINER_PORT : CONTAINER_PORT, use port not used at other containers
   
-  You the commands to know your UID, GID
+  Commands to know your UID, GID
   ```bash
   id -u # UID
   id -g # GID
