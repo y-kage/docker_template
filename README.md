@@ -13,7 +13,7 @@ Modify files.
   - HOST_PORT : HOST_PORT, use port not used at other containers
   - CONTAINER_PORT : CONTAINER_PORT, use port not used at other containers
   
-  Commands to know your UID, GID
+  Commands to search your UID, GID
   ```bash
   id -u # UID
   id -g # GID
