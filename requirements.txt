@@ -1,16 +1,24 @@
-torch==1.9.0+cu111
-torchaudio==0.9.0
-torchmetrics==0.11.4
-torchvision==0.10.0+cu111
-setuptools==59.5.0
-pytorch-lightning==1.7.7
-numpy==1.22.3
 matplotlib
+numpy
 opencv-python
+lightning
+torchmetrics
 torchinfo
+tensorflow
+tensorboardX
 wandb
 pandas
 Pillow
 black
 timm
 scipy
+# jupyterlab items
+ipywidgets
+jupyterlab
+# SoccerNet
+SoccerNet
+# YOLO
+ultralytics
+# COCO
+cython
+pycocotools
