@@ -17,6 +17,7 @@ services:
     user: "${UID}:${GID}"
     image: ${USER}/${IMAGE_LABEL}
     container_name: ${CONTAINER_NAME}
+    hostname: docker-container
     build:
       args:
         - USER_NAME=${USER_NAME}
