@@ -1,4 +1,4 @@
-1. Preparation
+# 1. Preparation
 ## Install
 ### Docker
 Follow the instructions
@@ -11,7 +11,7 @@ Follow the instructions [here](https://docs.nvidia.com/datacenter/cloud-native/c
 ## Docker Image
 - [nvidia/cuda](https://hub.docker.com/r/nvidia/cuda/tags?page=1&ordering=-name)
 
-1. When Using
+# 2. When Using
 ## Before Build
 Modify files.
 
@@ -92,7 +92,7 @@ Modify files.
   /usr/bin/python3 -m wandb login
   ```
 
-1. Reference
+# 3. Reference
 - [Ueda's Sample](https://github.com/sh1027/docker_pytorch)
 - [Docker to Ubuntu](https://zenn.dev/usagi1975/articles/2022-09-05-000000_docker_gpu)
 - [About Rootless mode](https://qiita.com/boocsan/items/781ae06fa4ac4291ba97)
