@@ -1,4 +1,4 @@
-# Preparation
+# 1. Preparation
 ## Install
 ### Docker
 Follow the instructions
@@ -11,7 +11,7 @@ Follow the instructions [here](https://docs.nvidia.com/datacenter/cloud-native/c
 ## Docker Image
 - [nvidia/cuda](https://hub.docker.com/r/nvidia/cuda/tags?page=1&ordering=-name)
 
-# When Using
+# 2. When Using
 ## Before Build
 Modify files.
 
