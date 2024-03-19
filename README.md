@@ -1,17 +1,18 @@
-# Install
-## Docker
+# Preparation
+## Install
+### Docker
 Follow the instructions
 - [Docker Engine](https://docs.docker.com/engine/install/ubuntu/)
 - [docker group](https://docs.docker.com/engine/install/linux-postinstall/)
 
-## NVIDIA Container Toolkit
+### NVIDIA Container Toolkit
 Follow the instructions [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 
-# Docker Image
+## Docker Image
 - [nvidia/cuda](https://hub.docker.com/r/nvidia/cuda/tags?page=1&ordering=-name)
-- [no cgroups](https://bbs.archlinux.org/viewtopic.php?id=266915)
 
-# Before Starting
+# When Using
+## Before Build
 Modify files.
 
 - Modify `docker_template.env`
@@ -45,7 +46,7 @@ Modify files.
   Change docker image, libraries, python version.
 
 
-# Commands
+## Useful Commands
 
 - Docker compose up \
   Use command at the directory where docker-compose.yaml is
