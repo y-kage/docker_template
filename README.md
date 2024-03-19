@@ -95,5 +95,4 @@ Modify files.
 # Reference
 - [Ueda's Sample](https://github.com/sh1027/docker_pytorch)
 - [Docker to Ubuntu](https://zenn.dev/usagi1975/articles/2022-09-05-000000_docker_gpu)
-- [Ueda Repository](https://github.com/sh1027/docker_pytorch)
 - [About Rootless mode](https://qiita.com/boocsan/items/781ae06fa4ac4291ba97)
