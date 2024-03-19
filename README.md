@@ -13,7 +13,8 @@ Follow the instructions [here](https://docs.nvidia.com/datacenter/cloud-native/c
 
 # 2. Getting Started
 ## Before Build
-Modify files.
+Modify files. Be careful os version and python version. \
+(ex. Ubuntu 20.04 -> python 3.9, Ubuntu 22.04 -> python 3.10)
 
 - Modify `docker_template.env`
   - COMPOSE_PROJECT_NAME : project name
