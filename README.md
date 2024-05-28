@@ -67,7 +67,7 @@ See [here](https://vegastack.com/tutorials/how-to-install-python-3-9-on-ubuntu-2
   # or
   docker exec -it -w {WORK_DIR_PATH} {container_name} bash
   # example
-  docker exec -it -w template bash
+  docker exec -it template bash
   ```
 
   As root
