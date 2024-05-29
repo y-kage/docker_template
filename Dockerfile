@@ -36,7 +36,7 @@ RUN python3 -m pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaud
 
 # Add user with sudo
 RUN groupadd -g ${GID} ${GROUP_NAME} && \
-    useradd -ms /bin/bash -u ${UID} -g ${GID} -G sudo ${USER_NAME} && \
+    useradd -m -s /bin/bash -u ${UID} -g ${GID} -G sudo ${USER_NAME} && \
     echo ${USER_NAME}:${PASSWORD} | chpasswd
 
 USER ${USER_NAME}
