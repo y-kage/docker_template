@@ -1,8 +1,7 @@
-ARG BASE_IMAGE=nvidia/cudagl:11.1.1-devel-ubuntu20.04
-# ARG BASE_IMAGE=nvidia/cuda:11.3.1-devel-ubuntu20.04
+ARG BASE_IMAGE=${BASE_IMAGE}
 FROM ${BASE_IMAGE}
 
-ARG PYTHON_VERSION=3.9
+ARG PYTHON_VERSION=${PYTHON_VERSION}
 ARG USER_NAME=docker
 ARG GROUP_NAME=dockers
 ARG UID=1000
@@ -15,12 +14,15 @@ ENV PYTHONPATH=${WORKDIR}
 
 RUN apt-get update && apt-get install -y \
     sudo zip unzip ffmpeg cmake wget vim screen \
+    git curl ssh openssh-client libopencv-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install --no-install-recommends -y \
-    git curl ssh openssh-client libopencv-dev \
-    python${PYTHON_VERSION} python${PYTHON_VERSION}-dev python3-pip python-is-python3 \
+RUN apt-get update && apt-get install -y software-properties-common
+RUN add-apt-repository -y ppa:deadsnakes/ppa \
+    && apt-get update && apt-get install -y \
+    python${PYTHON_VERSION} python${PYTHON_VERSION}-dev python${PYTHON_VERSION}-distutils python${PYTHON_VERSION}-tk \
+    python3-pip python-is-python3 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -31,7 +33,7 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python${PYTH
     && rm -rf /var/lib/apt/lists/*
 
 # # Install pytorch
-RUN python3 -m pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html \
+RUN python3 -m pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116 \
     && rm -rf /var/lib/apt/lists/*
 
 # Add user with sudo
