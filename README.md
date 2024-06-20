@@ -22,8 +22,10 @@ See [here](https://vegastack.com/tutorials/how-to-install-python-3-9-on-ubuntu-2
   - UID : UID
   - GID : GID
   - USER_NAME : user name used in container
-  - WORKDIR_LOCAL : local WORKDIR, directory mounted to container
   - WORKDIR_CONTAINER : container WORKDIR, directory where local WORKDIR mounted to
+  - WORKDIR_LOCAL : local WORKDIR, directory mounted to container
+  - BASE_IMAGE : Docker Image
+  - PYTHON_VERSION : Python version
   - IMAGE_LABEL : label to cache docker image with label, if exist, load, if not, build.
   - CONTAINER_NAME : CONTAINER NAME, used to get in the container
   - HOST_PORT : HOST_PORT, use port not used at other containers
