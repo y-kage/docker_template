@@ -47,7 +47,7 @@ See [here](https://vegastack.com/tutorials/how-to-install-python-3-9-on-ubuntu-2
 
 
 - Dockerfile
-  Change docker image, libraries, python version.
+  Change apt libraries, Pytorch.
 
 
 ## Useful Commands
