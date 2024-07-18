@@ -5,7 +5,6 @@ lightning
 torchmetrics
 torchinfo
 tensorflow
-tensorboardX
 wandb
 pandas
 Pillow
@@ -22,3 +21,17 @@ ultralytics
 # COCO
 cython
 pycocotools
+# MM-CDFSL
+decord
+deepspeed
+einops
+hydra-core
+networkx
+scikit-image
+scikit-learn
+timm
+# tensorboardX
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==2.1.0+cu121
+torchaudio==2.1.0+cu121
+torchvision==0.16.0+cu121
