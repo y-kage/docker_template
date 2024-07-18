@@ -51,3 +51,5 @@ WORKDIR ${WORKDIR}
 COPY requirements.txt ${WORKDIR}
 RUN python3 -m pip install -r requirements.txt \
     && rm -rf /var/lib/apt/lists/*
+
+ENV PATH=$PATH:/home/container/.local/bin
