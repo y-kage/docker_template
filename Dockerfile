@@ -32,10 +32,6 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python${PYTH
     && python3 -m pip install --upgrade pip setuptools \
     && rm -rf /var/lib/apt/lists/*
 
-# # Install pytorch
-# RUN python3 -m pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116 \
-#     && rm -rf /var/lib/apt/lists/*
-
 # Add user with sudo
 RUN groupadd -g ${GID} ${GROUP_NAME} && \
     useradd -m -s /bin/bash -u ${UID} -g ${GID} -G sudo ${USER_NAME} && \
@@ -44,12 +40,9 @@ RUN groupadd -g ${GID} ${GROUP_NAME} && \
 USER ${USER_NAME}
 WORKDIR ${WORKDIR}
 
-# COPY screenrc.txt ${WORKDIR}
-# RUN cp screenrc.txt /home/${USER_NAME}/.screenrc
-
-# Install other libraries
-COPY requirements.txt ${WORKDIR}
-RUN python3 -m pip install -r requirements.txt \
-    && rm -rf /var/lib/apt/lists/*
-
 ENV PATH=$PATH:/home/container/.local/bin
+
+# # Install other libraries
+# COPY requirements.txt ${WORKDIR}
+# RUN python3 -m pip install -r requirements.txt \
+#     && rm -rf /var/lib/apt/lists/*
