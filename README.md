@@ -38,7 +38,7 @@ See [here](https://vegastack.com/tutorials/how-to-install-python-3-9-on-ubuntu-2
   ```
 
 
-- docker-compose.yaml
+- Modify `docker-compose.yaml` \
   Change image, container_name, volumes, shm_size if needed.
   - image : name of image cached to local. if exist, load, if not, build.
   - container_name : name used to get in the container.
@@ -46,8 +46,12 @@ See [here](https://vegastack.com/tutorials/how-to-install-python-3-9-on-ubuntu-2
   - shm_size : shared memory size. check your spec.
 
 
-- Dockerfile
-  Change apt libraries, Pytorch.
+- Modify `Dockerfile` \
+  Change libraries install via `apt`.
+
+
+- Modify `requirements.txt` \
+  Change libraries install via `pip`.
 
 
 ## Useful Commands
