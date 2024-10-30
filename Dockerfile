@@ -17,8 +17,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-ARG PYTHON_VERSION=${PYTHON_VERSION}
 RUN apt-get update && apt-get install -y software-properties-common
+ARG PYTHON_VERSION=${PYTHON_VERSION}
 RUN add-apt-repository -y ppa:deadsnakes/ppa \
     && apt-get update && apt-get install -y \
     python${PYTHON_VERSION} python${PYTHON_VERSION}-dev python${PYTHON_VERSION}-distutils python${PYTHON_VERSION}-tk \
