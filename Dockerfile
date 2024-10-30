@@ -27,6 +27,7 @@ RUN add-apt-repository -y ppa:deadsnakes/ppa \
     && rm -rf /var/lib/apt/lists/*
 
 # Change default python3 version
+RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python${PYTHON_VERSION}
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python${PYTHON_VERSION} 1 \
     && update-alternatives --set python3 /usr/bin/python${PYTHON_VERSION} \
     && python3 -m pip install --upgrade pip setuptools \
