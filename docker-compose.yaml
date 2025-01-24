@@ -28,7 +28,16 @@ services:
       shm_size: '16gb'
       dockerfile: Dockerfile
     tty: true
+    # volumes:
+    #   - "${WORKDIR_LOCAL}:${WORKDIR_CONTAINER}"
+    environment:
+      - DISPLAY=${DISPLAY}
     volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev/dri:/dev/dri
+      # - /usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
       - "${WORKDIR_LOCAL}:${WORKDIR_CONTAINER}"
+    devices:
+      - /dev/dri:/dev/dri
     ports:
       - "${HOST_PORT}:${CONTAINER_PORT}"
